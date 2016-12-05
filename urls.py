@@ -1,5 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
 from api.views import *
 from client.views import *
 
@@ -15,3 +16,8 @@ urlpatterns = [
 
     url(r'^$', Placeholder.as_view()),
 ]
+
+if not settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
