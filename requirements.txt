@@ -4,3 +4,4 @@ gunicorn==19.6.0
 whitenoise==2.0.6
 pyjade==4.0.0
 djangorestframework==3.5.3
+requests==2.12.3
