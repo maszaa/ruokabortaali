@@ -78,7 +78,7 @@ REST_FRAMEWORK = {
     )
 }
 
-WSGI_APPLICATION = 'api.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
