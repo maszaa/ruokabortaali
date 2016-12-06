@@ -11,9 +11,11 @@ class DayMenuView(APIView):
             day = datetime.date(year=int(year), month=int(month), day=int(day))
             formatString = ""
             fullUrl = request.build_absolute_uri()
+
             if "?format=json" in fullUrl:
                 fullUrl = fullUrl.split("?")[0]
                 formatString = "?format=json"
+
             hertsi = Hertsi(fullUrl + "Hertsi/" + formatString, day)
             reaktori = Reaktori(fullUrl + "Reaktori/" + formatString, day)
             menus = {"ravintolat" : [hertsi.getAll(), reaktori.getAll()], "uri": request.build_absolute_uri()}
@@ -40,7 +42,7 @@ class RestaurantMenuView(APIView):
             return response
         except (KeyError, ValueError) as error:
             response = Response({"Virhe": str(error)}, status=status.HTTP_400_BAD_REQUEST)
-            return resposen
+            return response
 
 class RestaurantOneMenuView(APIView):
     def get(self, request, year, month, day, restaurant, menuName):
