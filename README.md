@@ -13,7 +13,7 @@ Django, Django REST, jade
 
 ## REST-rajapinnan dokumentaatio
 
-### api/[vvvv]/[kk]/[pv]
+### api/[vvvv]/[kk]/[pv]/?format=json
 jossa *vvvv* on vuosi, *kk* kalenterikuukauden numero (01/1-12) ja *pv* kalenterikuukauden päivän numero (01/1-31)
 * **HTTP Method:** GET
 * **Content-Type:** application/json
@@ -24,7 +24,7 @@ jossa *vvvv* on vuosi, *kk* kalenterikuukauden numero (01/1-12) ja *pv* kalenter
   * 200: Käyttäjän pyytämän päivän ruokalistat
   * 403: Virheilmoitus
 
-### api/[vvvv]/[kk]/[pv]/[ravintola]
+### api/[vvvv]/[kk]/[pv]/[ravintola]/?format=json
 jossa *vvvv* on vuosi, *kk* kalenterikuukauden numero (01/1-12), *pv* kalenterikuukauden päivän numero (01/1-31) ja *ravintola* Hertsi tai Reaktori (kirjainkoolla ei väliä)
 * **HTTP Method:** GET
 * **Content-Type:** application/json
@@ -35,7 +35,7 @@ jossa *vvvv* on vuosi, *kk* kalenterikuukauden numero (01/1-12), *pv* kalenterik
   * 200: Käyttäjän pyytämän ravintolan halutun päivän ruokalistat
   * 403: Virheilmoitus
 
-### api/[vvvv]/[kk]/[pv]/[ravintola]/[linjasto]
+### api/[vvvv]/[kk]/[pv]/[ravintola]/[linjasto]/?format=json
 jossa *vvvv* on vuosi, *kk* kalenterikuukauden numero (01/1-12), *pv* kalenterikuukauden päivän numero (01/1-31), *ravintola* Hertsi tai Reaktori (kirjainkoolla ei väliä) ja *linjasto* warm salad, wok, soup, vegerarian, pizza, vitality tai popular ravintolan ollessa Hertsi, tai keittolounas, jälkiruoka, special, a´la carte, iltaruoka, leipäateria, smoothie, linjasto, kasvislounas tai salaattilounas ravintolan ollessa Reaktori
 * **HTTP Method:** GET
 * **Content-Type:** application/json
