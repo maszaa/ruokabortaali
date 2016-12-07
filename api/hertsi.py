@@ -4,7 +4,8 @@ import datetime
 class Hertsi:
     def __init__(self, url, day):
         self.uri = url
-        self.menu = {"ravintola": "Hertsi", "linjastot" : {}, "uri" : self.uri}
+        self.day = str(day.day) + "." + str(day.month) + "." + str(day.year)
+        self.menu = {"ravintola": "Hertsi", "linjastot" : {}, "uri" : self.uri, "päivä": self.day}
 
         url = "http://www.sodexo.fi/ruokalistat/output/daily_json/12812/" + str(day.year) + "/" + str(day.month) + "/" + str(day.day) + "/fi"
         response = requests.get(url)
@@ -24,7 +25,7 @@ class Hertsi:
 
     def getOneMenu(self, menu):
         try:
-            oneMenu = {"ravintola": "Hertsi", menu : self.menu["linjastot"][menu.lower()], "uri" : self.menu["uri"]}
+            oneMenu = {"ravintola": "Hertsi", menu : self.menu["linjastot"][menu.lower()], "uri" : self.menu["uri"], "päiväys": self.day}
             return oneMenu
         except KeyError:
             raise KeyError("Virheellinen menu.")

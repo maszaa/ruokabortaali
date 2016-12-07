@@ -18,7 +18,7 @@ class DayMenuView(APIView):
 
             hertsi = Hertsi(fullUrl + "Hertsi/" + formatString, day)
             reaktori = Reaktori(fullUrl + "Reaktori/" + formatString, day)
-            menus = {"ravintolat" : [hertsi.getAll(), reaktori.getAll()], "uri": request.build_absolute_uri()}
+            menus = {"ravintolat" : [hertsi.getAll(), reaktori.getAll()], "uri": request.build_absolute_uri(), "päiväys": str(day.day) + "." + str(day.month) + "." + str(day.year)}
             response = Response(menus, status=status.HTTP_200_OK)
             return response
         except (KeyError, ValueError) as error:
