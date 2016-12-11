@@ -1,6 +1,10 @@
 # ruokabortaali
 REST API ja webkäli TTY:llä sijaitsevien ravintoloiden ruokalistoille
 
+## Ryhmän jäsenet
+* Samuli Kohomäki
+* Matti Hämäläinen
+
 ## Idea
 Yhdistetään TTY:llä sijaitsevien ravintoloiden APIen tarjoamat ruokalistatiedot REST APIksi ja luodaan tätä APIa hyödyntävä webclient.
 
@@ -9,7 +13,7 @@ Yhdistetään TTY:llä sijaitsevien ravintoloiden APIen tarjoamat ruokalistatied
 * Amica (Reaktori): http://www.amica.fi/modules/json/json/Index?costNumber=0812&firstDay=[vvvv-kk-pv]&lastDay=[vvvv-kk-pv]&language=fi
 
 ## Tekniikka
-Django, Django REST, jade
+Django, Django REST, HTML, jQuery
 
 ## REST-rajapinnan dokumentaatio
 
@@ -45,3 +49,8 @@ jossa *vvvv* on vuosi, *kk* kalenterikuukauden numero (01/1-12), *pv* kalenterik
 * **Paluuarvot:**
   * 200: Käyttäjän pyytämän ravintolan linjaston halutun päivän ruokalistat
   * 403: Virheilmoitus
+
+## Miten ajetaan
+* Client-sovellus: https://ruokabortaali.herokuapp.com/
+* Client-sovellus kiinteällä päiväyksellä (12.12.2016): https://ruokabortaali.herokuapp.com/test/
+* REST API: https://ruokabortaali.herokuapp.com/api/
