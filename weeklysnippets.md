@@ -11,3 +11,4 @@
 * Amican ja Sodexon apien parserointi
 * Näkymät eri apeille  + url-ohjaukset
 ** --> REST-api
+* Webbisivu jota kuka tahansa voi ajaa clienttinä
