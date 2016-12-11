@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ruokabortaali API:n dokumentaatio</title>
+</head>
+<body>
+  <h1>Ruokabortaali API:n dokumentaatio</h1>
+  <h2><a id="apivvvvkkpvformatjson_1"></a>api/[vvvv]/[kk]/[pv]/?format=json</h2>
+  <p>jossa <em>vvvv</em> on vuosi, <em>kk</em> kalenterikuukauden numero (01/1-12) ja <em>pv</em> kalenterikuukauden päivän numero (01/1-31)</p>
+  <ul>
+    <li><strong>HTTP Method:</strong> GET</li>
+    <li><strong>Content-Type:</strong> application/json</li>
+    <li><strong>Status code:</strong>
+      <ul>
+        <li>200: Pyyntö ok</li>
+        <li>403: Virheellinen käyttäjän pyyntö</li>
+      </ul>
+    </li>
+    <li><strong>Paluuarvot:</strong>
+      <ul>
+        <li>200: Käyttäjän pyytämän päivän ruokalistat</li>
+        <li>403: Virheilmoitus</li>
+      </ul>
+    </li>
+  </ul>
+  <h2><a id="apivvvvkkpvravintolaformatjson_12"></a>api/[vvvv]/[kk]/[pv]/[ravintola]/?format=json</h2>
+  <p>jossa <em>vvvv</em> on vuosi, <em>kk</em> kalenterikuukauden numero (01/1-12), <em>pv</em> kalenterikuukauden päivän numero (01/1-31) ja <em>ravintola</em> Hertsi tai Reaktori (kirjainkoolla ei väliä)</p>
+  <ul>
+    <li><strong>HTTP Method:</strong> GET</li>
+    <li><strong>Content-Type:</strong> application/json</li>
+    <li><strong>Status code:</strong>
+      <ul>
+        <li>200: Pyyntö ok</li>
+        <li>403: Virheellinen käyttäjän pyyntö</li>
+      </ul>
+    </li>
+    <li><strong>Paluuarvot:</strong>
+      <ul>
+        <li>200: Käyttäjän pyytämän ravintolan halutun päivän ruokalistat</li>
+        <li>403: Virheilmoitus</li>
+      </ul>
+    </li>
+  </ul>
+  <h2><a id="apivvvvkkpvravintolalinjastoformatjson_23"></a>api/[vvvv]/[kk]/[pv]/[ravintola]/[linjasto]/?format=json</h2>
+  <p>jossa <em>vvvv</em> on vuosi, <em>kk</em> kalenterikuukauden numero (01/1-12), <em>pv</em> kalenterikuukauden päivän numero (01/1-31), <em>ravintola</em> Hertsi tai Reaktori (kirjainkoolla ei väliä) ja <em>linjasto</em> warm salad, wok, soup, vegerarian, pizza, vitality tai popular ravintolan ollessa Hertsi, tai keittolounas, jälkiruoka, special, a´la carte, iltaruoka, leipäateria, smoothie, linjasto, kasvislounas tai salaattilounas ravintolan ollessa Reaktori</p>
+  <ul>
+    <li><strong>HTTP Method:</strong> GET</li>
+    <li><strong>Content-Type:</strong> application/json</li>
+    <li><strong>Status code:</strong>
+      <ul>
+        <li>200: Pyyntö ok</li>
+        <li>403: Virheellinen käyttäjän pyyntö</li>
+      </ul>
+    </li>
+    <li><strong>Paluuarvot:</strong>
+      <ul>
+        <li>200: Käyttäjän pyytämän ravintolan linjaston halutun päivän ruokalistat</li>
+        <li>403: Virheilmoitus</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+</html>
