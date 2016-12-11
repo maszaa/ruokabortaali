@@ -2,8 +2,8 @@
 REST API ja webkäli TTY:llä sijaitsevien ravintoloiden ruokalistoille
 
 ## Ryhmän jäsenet
-* Samuli Kohomäki
-* Matti Hämäläinen
+* Samuli Kohomäki / samuli.kohomaki@student.tut.fi
+* Matti Hämäläinen / matti.m.hamalainen@student.tut.fi
 
 ## Idea
 Yhdistetään TTY:llä sijaitsevien ravintoloiden APIen tarjoamat ruokalistatiedot REST APIksi ja luodaan tätä APIa hyödyntävä webclient.
