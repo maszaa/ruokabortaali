@@ -6,3 +6,4 @@ pyjade==4.0.0
 djangorestframework==3.5.3
 requests==2.12.3
 psycopg2==2.6.1
+django-cors-headers
